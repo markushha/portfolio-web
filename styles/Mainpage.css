@@ -69,3 +69,17 @@
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
+.first-section-right {
+  display: flex;
+  margin-left: 134px;
+}
+
+.first-image {
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.first-image:hover {
+  transform: scale(1.05);
+}

@@ -69,7 +69,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="first-section-right"></div>
+            <div className="first-section-right">
+              <Image className="first-image" src={"/memoji.svg"} alt="photo" width={266} height={266} />
+            </div>
           </div>
         </div>
       </div>
