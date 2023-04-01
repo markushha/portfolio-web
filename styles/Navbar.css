@@ -1,10 +1,9 @@
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 36px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .nav-title {
@@ -15,6 +14,7 @@ nav {
 }
 
 .nav-menu {
+  margin-left: 180px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -22,6 +22,7 @@ nav {
 }
 
 .nav-menu-item {
+  z-index: 10;
   font-weight: medium;
   font-size: 20px;
   padding-bottom: 5px;
@@ -33,6 +34,8 @@ nav {
 }
 
 .nav-location {
+  cursor: pointer;
+  margin-left: 300px;
   display: flex;
   align-items: center;
   justify-content: center;

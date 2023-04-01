@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import Meta from "@/app/utils/Meta";
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ export default function Home() {
                   </div>
                 </h1>
               </div>
-              <div className="first-left-mid">
+              <div className="first-left-mid mb-[10px]">
                 <p className="sub-title">
                   Experienced Web-Developer who’s here to help you promote and
                   improve your business. Together we’ll build the most powerful
@@ -59,7 +60,7 @@ export default function Home() {
               </h2>
               <div className="first-mid-techs">
                 <i className="devicon-react-original icon" />
-                <i className="devicon-nextjs-line icon"/>
+                <i className="devicon-nextjs-line icon" />
                 <i className="devicon-typescript-plain icon"></i>
                 <i className="devicon-javascript-plain icon"></i>
                 <i className="devicon-html5-plain icon"></i>
@@ -70,9 +71,99 @@ export default function Home() {
             </div>
 
             <div className="first-section-right">
-              <Image className="first-image" src={"/memoji.svg"} alt="photo" width={266} height={266} />
+              <Image
+                className="first-image"
+                src={"/memoji.svg"}
+                alt="photo"
+                width={266}
+                height={266}
+              />
             </div>
           </div>
+        </div>
+
+        <div className="container">
+          <div className="second-section">
+            <div className="second-section-top">
+              <h2 className="h2-second-title">Project Process</h2>
+              <div className="line" />
+              <p className="sub-title-second">
+                LET{"'"}S TALK ABOUT YOUR
+                <br />
+                PROJECT
+              </p>
+            </div>
+
+            <div className="second-section-bottom">
+              <div className="progress-bar">
+                <div className="progress-item">01</div>
+                <div className="progress-line" />
+                <div className="progress-item">02</div>
+                <div className="progress-line-2" />
+                <div className="progress-item">03</div>
+              </div>
+            </div>
+
+            <div className="progress-content">
+              <div className="second-section-item">
+                <p className="stage-title">ANALYSE</p>
+                <p className="stage-descr">
+                  On this stage I’ll understand your needs and we will discuss
+                  all the details about your project
+                </p>
+              </div>
+
+              <div className="second-section-item ml-[60px]">
+                <p className="stage-title">UI/UX</p>
+                <p className="stage-descr">
+                  What users see above all is the visual product. On this stage
+                  we will create user-friendly design and interface
+                </p>
+              </div>
+
+              <div className="second-section-item ml-[60px]">
+                <p className="stage-title">DEVELOPMENT & DEPLOY</p>
+                <p className="stage-descr">
+                  At this stage we’re going to finish what we’ve started and
+                  turn your imaginations into reality
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="contact">
+            <div className="contact-form">
+              <h2 className="contact-title">Contact</h2>
+              <form className="form">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="form-input"
+                />
+                <input
+                  type="mail"
+                  placeholder="mark@icloud.com"
+                  className="form-input"
+                />
+                <textarea 
+                  placeholder="Your Message..."
+                  className="form-textarea"
+                />
+                <button className="form-btn">REACH ME</button>
+              </form>
+            </div>
+
+            <div className="contact-right">
+              <Image className="contact-img" src="/Rectangle.svg" alt="memoji" width={288} height={288} />
+              <p className="contact-descr">AFTER I’LL SEE YOUR MESSAGE I’M GOING TO REACH YOU BACK ASAP TO DISCUSS OUR FURTHER PARTNERSHIP. I’LL DO MY BEST TO PROVIDE YOU WITH THE BEST SERVICE</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <Footer />
         </div>
       </div>
     </>
