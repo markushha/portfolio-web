@@ -11,6 +11,10 @@ nav {
   font-size: 25px;
   font-weight: medium;
   letter-spacing: 6px;
+  position: relative;
+  display: flex;
+  background: rgb(1, 1, 1, 0);
+  z-index: 10;
 }
 
 .nav-menu {

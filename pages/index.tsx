@@ -1,11 +1,41 @@
 import Head from "next/head";
-import { Montserrat } from "next/font/google";
+import { useState, useRef, useEffect } from "react";
 import Meta from "@/app/utils/Meta";
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
+import emailjs from "@emailjs/browser";
+import { service, template_id, public_key } from ".././config";
+import Modal from "@/app/components/Modal";
 
 export default function Home() {
+  const form = useRef() as any;
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const submitEmail = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(service, template_id, form.current as any, public_key)
+      .then(
+        () => {
+          setIsSubmitted(true);
+        },
+        (error: any) => {
+          setError(error);
+        }
+      );
+  };
+  
+  useEffect(() => {
+    if (isSubmitted) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isSubmitted])
+
   return (
     <>
       <Meta title="Mark Inger" />
@@ -33,6 +63,7 @@ export default function Home() {
                   Hello, <br />I{"'"}m Mark
                   <div className="mt-[73px] ml-[15px]">
                     <Image
+                      className="emoji"
                       src="/emojis/waving_hand.svg"
                       alt="emoji"
                       width={50}
@@ -136,18 +167,21 @@ export default function Home() {
           <div className="contact">
             <div className="contact-form">
               <h2 className="contact-title">Contact</h2>
-              <form className="form">
+              <form ref={form} className="form" onSubmit={submitEmail}>
                 <input
                   type="text"
+                  name="user_name"
                   placeholder="Your Name"
                   className="form-input"
                 />
                 <input
                   type="mail"
+                  name="user_email"
                   placeholder="mark@icloud.com"
                   className="form-input"
                 />
-                <textarea 
+                <textarea
+                  name="message"
                   placeholder="Your Message..."
                   className="form-textarea"
                 />
@@ -156,16 +190,31 @@ export default function Home() {
             </div>
 
             <div className="contact-right">
-              <Image className="contact-img" src="/Rectangle.svg" alt="memoji" width={288} height={288} />
-              <p className="contact-descr">AFTER I’LL SEE YOUR MESSAGE I’M GOING TO REACH YOU BACK ASAP TO DISCUSS OUR FURTHER PARTNERSHIP. I’LL DO MY BEST TO PROVIDE YOU WITH THE BEST SERVICE</p>
+              <Image
+                className="contact-img"
+                src="/Rectangle.svg"
+                alt="memoji"
+                width={288}
+                height={288}
+              />
+              <p className="contact-descr">
+                AFTER I’LL SEE YOUR MESSAGE I’M GOING TO REACH YOU BACK ASAP TO
+                DISCUSS OUR FURTHER PARTNERSHIP. I’LL DO MY BEST TO PROVIDE YOU
+                WITH THE BEST SERVICE
+              </p>
             </div>
           </div>
         </div>
-
         <div className="container">
           <Footer />
         </div>
       </div>
+      {isSubmitted && <Modal onClose={setIsSubmitted} />}
+      <div className="circle-blur top-[-50px] left-[-50px] w-[350px] h-[350px]" />
+      <div className="circle-blur top-[221px] right-[407px] w-[350px] h-[350px]" />
+      <div className="circle-blur w-[802px] h-[347px] top-[885px] left-[559px]" />
+      <div className="circle-blur w-[600px] h-[600px] top-[1325px] left-[14px] " />
+      <div className="circle-blur w-[400px] h-[350px] top-[1369px] right-[305px]" />
     </>
   );
 }

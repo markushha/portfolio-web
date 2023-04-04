@@ -1,0 +1,57 @@
+.modal-wrapper {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.cookiesContent {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px 30px 70px;
+}
+
+.modal-img {
+  margin-bottom: 15px;
+  background: white;
+}
+
+.modal-text {
+  background: white;
+  color: black;
+  font-size: 20px;
+}
+
+button.close {
+  width: 30px;
+  font-size: 20px;
+  color: #c0c5cb;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button.accept {
+  background-color: #6947EF;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  padding: 14px;
+  font-size: 16px;
+  color: white;
+  /* box-shadow: 0px 6px 18px -5px rgb(139, 89, 255); */
+  box-shadow: 0px 5px 15px -5px rgb(108, 71, 255);
+}

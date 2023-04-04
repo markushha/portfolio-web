@@ -15,7 +15,7 @@ function Navbar(props: Props) {
   return (
     <nav>
       <div className="nav-title">
-        <Link href="/">MARK INGER</Link>
+        <Link className="nav-title" href="/">MARK INGER</Link>
       </div>
 
       <div className="nav-menu">
