@@ -201,11 +201,11 @@ export default function Home() {
         </div>
       </div>
       {isSubmitted && <Modal onClose={setIsSubmitted} />}
-      <div className="circle-blur top-[-50px] left-[-50px] w-[350px] h-[350px]" />
-      <div className="circle-blur top-[221px] right-[407px] w-[350px] h-[350px]" />
-      <div className="circle-blur w-[802px] h-[347px] top-[885px] left-[559px]" />
-      <div className="circle-blur w-[600px] h-[600px] top-[1325px] left-[14px] " />
-      <div className="circle-blur w-[400px] h-[350px] top-[1369px] right-[305px]" />
+      <div className="circle-blur" id="circle-1"/>
+      <div className="circle-blur" id="circle-2"/>
+      <div className="circle-blur" id="circle-3"/>
+      <div className="circle-blur" id="circle-4"/>
+      <div className="circle-blur" id="circle-5"/>
     </>
   );
 }

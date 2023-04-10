@@ -304,7 +304,7 @@
 .contact-img {
   margin-left: 284px;
   z-index: 10;
-  background-color: rgb(1, 1, 1, 0)
+  background-color: rgb(1, 1, 1, 0);
 }
 
 .contact-descr {
@@ -319,14 +319,14 @@
 .footer {
   width: 100%;
   display: flex;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: medium;
   margin-top: 130px;
   margin-bottom: 30px;
 }
 
 .left-side {
-  margin-right: 135px;
+  margin-right: 418px;
   z-index: 10;
   background-color: rgb(1, 1, 1, 0)
 }
@@ -342,4 +342,61 @@
   border-radius: 50%;
   z-index: 0;
   position: absolute;
+}
+
+#circle-1 {
+  top: -50px;
+  left: -50px;
+  width: 350px;
+  height: 350px;
+}
+
+#circle-2 {
+  top: 221px;
+  right: 407px;
+  width: 350px;
+  height: 350px;
+}
+
+#circle-3 {
+  width: 802px;
+  height: 347px;
+  top: 885px;
+  left: 559px;
+}
+
+#circle-4 {
+  width: 600px;
+  height: 600px;
+  top: 1325px;
+  left: 14px;
+}
+
+#circle-5 {
+  width: 400px;
+  height: 350px;
+  top: 1369px;
+  right: 305px;
+}
+
+@media screen and (max-width: 1440px) {
+  
+  #circle-2 {
+    right: 157px;
+  }
+  
+  #circle-3 {
+    left: 300px;
+  }
+  
+  #circle-4 {
+    left: 0;
+    top: 1435px;
+  }
+  
+  #circle-5 {
+    width: 350px;
+    height: 350px;
+    right: 89px;
+  }
 }
