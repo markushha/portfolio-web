@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-interface Props {}
+function Navbar() {
+  const [active, setActive] = useState("");
 
-function Navbar(props: Props) {
-  const {} = props;
-  const [active, setActive] = useState("home");
+  useEffect(() => {
+    setActive(window.location.pathname);
+  }, []);
 
-  const handleActive = (e: any) => {
-    setActive(e.target.innerText.toLowerCase());
+  const handleActive = (path: string) => {
+    setActive(path);
   };
 
   return (
@@ -19,9 +20,9 @@ function Navbar(props: Props) {
       </div>
 
       <div className="nav-menu">
-        <Link href="/"><div onClick={(e) => handleActive(e)} className={`nav-menu-item ${active === "home" ? "active" : ""}`}>HOME</div></Link>
-        <Link href="/"><div onClick={(e) => handleActive(e)} className={`nav-menu-item ${active === "contact" ? "active" : ""}`}>CONTACT</div></Link>
-        <Link href="/projects"><div onClick={(e) => handleActive(e)} className={`nav-menu-item ${active === "projects" ? "active" : ""}`}>PROJECTS</div></Link>
+        <Link href="/"><div onClick={(e) => handleActive("home")} className={`nav-menu-item ${active === "/" ? "active" : ""}`}>HOME</div></Link>
+        <Link href="/projects"><div onClick={(e) => handleActive("projects")} className={`nav-menu-item ${active === "/projects" ? "active" : ""}`}>PROJECTS</div></Link>
+        <Link href="/hire"><div onClick={(e) => handleActive("hire")} className={`nav-menu-item ${active === "/hire" ? "active" : ""}`}>HIRE ME</div></Link>
       </div>
 
       <div className="nav-location">

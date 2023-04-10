@@ -1,0 +1,6 @@
+Thank you for contacting us!
+
+We have received your contact with following details:
+Name: ${name}
+Email: ${email}
+Message: ${message}

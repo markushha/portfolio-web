@@ -1,0 +1,98 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+}
+
+.project-wrapper {
+  margin-top: 13px;
+  margin-bottom: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* project details */
+
+.project-details {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 53px 0 0;
+}
+
+.project-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 50px 0 25px 0;
+}
+
+.project-description {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.project-tech {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.project-tech-item {
+  color: white;
+  font-size: 50px;
+  margin: 0 20px 20px 0;
+}
+
+/* project demo */
+
+.project-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  margin-top: 17px;
+}
+
+.project-img {
+  margin: 50px 0 25px 0;
+  border-radius: 5px;
+  filter: drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.5));
+}
+
+.project-links {
+  display: flex;
+  margin: 0 auto;
+}
+
+.project-link {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 27px;
+  margin-right: 40px;
+  transition: 0.2s ease all;
+}
+
+.links-title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.project-head {
+  display: flex;
+  width: 100%;
+}
+
+.projects-h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-top: 173px;
+}
