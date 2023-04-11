@@ -23,7 +23,7 @@ function Project(props: Props) {
           {tech.map((tech) => {
             return (
               <div className="project-tech-item" key={index}>
-                <i className={tech} />
+                <Image className="project-icon" width={50} height={50} src={`/icons/${tech}.svg`} alt={`${tech} icon`}/>
               </div>
             );
           })}
@@ -35,20 +35,20 @@ function Project(props: Props) {
           className="project-img"
           src={image}
           alt={`${title} image`}
-          width={1600}
-          height={900}
+          width={759}
+          height={368}
         />
         <div className="project-links">
-          <a href={links[0]} target="_blank">
+          <a className="clean-z" href={links[0]} target="_blank">
             <div className="project-link">
-              <i className="devicon-webpack-plain"></i>
+              <Image className="clean-z" src="/icons/vercel.svg" alt="vercel icon" width={34} height={34} />
               <p className="links-title">View Demo</p>
             </div>
           </a>
 
-          <a href={links[1]} target="_blank">
+          <a className="clean-z" href={links[1]} target="_blank">
             <div className="project-link">
-              <i className="devicon-github-original"></i>
+              <Image className="clean-z" src="/icons/github.svg" alt="github icon" width={40} height={40} />
               <p className="links-title">Visit Repo</p>
             </div>
           </a>

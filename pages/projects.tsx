@@ -11,7 +11,7 @@ function Projects(props: Props) {
     {
       title: "Home Link",
       description: "Home Link - is an axis incident-manager website. All complex residents can view all stuff contacts and send an application if something was broken online.",
-      tech: ["devicon-react-original", "devicon-nextjs-original", "devicon-javascript-plain", "devicon-mongodb-plain,", "devicon-tailwindcss-plain", "devicon-git-plain"],
+      tech: ["react", "nextjs", "js", "mongodb", "tailwind", "git"],
       image: "/home-link.svg",
       links: ["https://home-link.vercel.app/", "https://github.com/markushha/Home-Link"],
       index: 0
