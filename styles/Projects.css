@@ -118,3 +118,12 @@
   font-weight: 700;
   margin: 130px 0 30px 0;
 }
+
+/* circles */
+
+#circle-proj-1 {
+  top: 275px;
+  right: 896px;
+  width: 375px;
+  height: 375px;
+}

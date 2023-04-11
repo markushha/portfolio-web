@@ -11,23 +11,51 @@ import { useState, useRef, useEffect } from "react";
 import { service, template_id, public_key } from ".././config";
 
 export default function Home() {
-  const form = useRef() as any;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
+
+  const form = {name, email, message};
+
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.name;
+
+    switch (name) {
+      case "name":
+        setName(e.target.value);
+        break;
+      case "email":
+        setEmail(e.target.value);
+        break;
+      case "message":
+        setMessage(e.target.value);
+        break;
+    }
+  };
+
+  const sendForm = async () => {
+    try {
+      console.log(form);
+      const res = await emailjs.sendForm(service, template_id, form as any, public_key);
+      return res;
+    } catch (err: any) { 
+      setError(err.message);
+    }
+  }
 
   const submitEmail = async (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(service, template_id, form.current as any, public_key)
-      .then(
-        () => {
-          setIsSubmitted(true);
-        },
-        (error: any) => {
-          setError(error);
-        }
-      );
+    // if (/\S+@\S+\.\S+/.test(email)) return setError("Please enter a valid email");
+
+    if (name.trim() && email.trim() && message.trim()) {
+      sendForm();
+    } else {
+      return setError("Please fill all the fields");
+    }
   };
   
   useEffect(() => {
@@ -158,23 +186,29 @@ export default function Home() {
           <div className="contact">
             <div className="contact-form">
               <h2 className="contact-title">Contact</h2>
-              <form ref={form} className="form" onSubmit={submitEmail}>
+              <form className="form" onSubmit={submitEmail}>
                 <input
                   type="text"
-                  name="user_name"
+                  value={name}
+                  onChange={changeHandler}
+                  name="name"
                   placeholder="Your Name"
                   className="form-input"
                 />
                 <input
-                  type="mail"
-                  name="user_email"
+                  type="email"
+                  value={email}
+                  onChange={changeHandler}
+                  name="email"
                   placeholder="mark@icloud.com"
                   className="form-input"
                 />
                 <textarea
                   name="message"
+                  value={message}
+                  onChange={changeHandler as any}
                   placeholder="Your Message..."
-                  className="form-textarea"
+                  className="form-textarea" 
                 />
                 <button className="form-btn">REACH ME</button>
               </form>
@@ -200,7 +234,8 @@ export default function Home() {
           <Footer />
         </div>
       </div>
-      {isSubmitted && <Modal onClose={setIsSubmitted} />}
+      {isSubmitted && <Modal error={false} onClose={setIsSubmitted} />}
+      {error && <Modal errorMessage={error} error={true} onClose={setError} />}
       <div className="circle-blur" id="circle-1"/>
       <div className="circle-blur" id="circle-2"/>
       <div className="circle-blur" id="circle-3"/>

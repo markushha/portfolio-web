@@ -19,7 +19,7 @@ function Projects(props: Props) {
     {
       title: "E-Commerce Web App",
       description: "A simple React e-commerce web app with a shopping cart and realized search bar & filters. I made it in 24 hours for a job interview.",
-      tech: ["devicon-react-original", "devicon-javascript-plain", "devicon-tailwindcss-plain", "devicon-sass-original" ,"devicon-git-plain"],
+      tech: ["react", "js", "tailwind", "scss" ,"git"],
       image: "/e-commerce.svg",
       links: ["https://starfund-e-commerce.vercel.app/", "https://github.com/markushha/E-Commerce-Web"],
       index: 1
@@ -43,6 +43,7 @@ function Projects(props: Props) {
           return <Project key={project.index} project={project} />
         })}
         </div>
+        <div className="circle-blur" id="circle-proj-1"/>
       </div>
     </>
   )
