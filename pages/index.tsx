@@ -11,60 +11,37 @@ import { useState, useRef, useEffect } from "react";
 import { service, template_id, public_key } from ".././config";
 
 export default function Home() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const form = {name, email, message};
-
-  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const name = e.target.name;
-
-    switch (name) {
-      case "name":
-        setName(e.target.value);
-        break;
-      case "email":
-        setEmail(e.target.value);
-        break;
-      case "message":
-        setMessage(e.target.value);
-        break;
-    }
-  };
-
-  const sendForm = async () => {
-    try {
-      console.log(form);
-      const res = await emailjs.sendForm(service, template_id, form as any, public_key);
-      return res;
-    } catch (err: any) { 
-      setError(err.message);
-    }
-  }
+  const form =  useRef<HTMLInputElement>();
 
   const submitEmail = async (e: React.SyntheticEvent) => {
     e.preventDefault();
+    const currentForm = form.current as any || null;
+    
+    try {
+      setLoading(true);
+      setError("");
+      await emailjs.sendForm(service, template_id, form.current as any, public_key);
+      setIsSubmitted(true);
+      setLoading(false);
 
-    // if (/\S+@\S+\.\S+/.test(email)) return setError("Please enter a valid email");
-
-    if (name.trim() && email.trim() && message.trim()) {
-      sendForm();
-    } else {
-      return setError("Please fill all the fields");
+      currentForm.reset();
+    } catch(err: any) {
+      setLoading(false);
+      setError(err.text);
     }
   };
-  
+
   useEffect(() => {
     if (isSubmitted) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
-  }, [isSubmitted])
+  }, [isSubmitted]);
 
   return (
     <>
@@ -186,31 +163,28 @@ export default function Home() {
           <div className="contact">
             <div className="contact-form">
               <h2 className="contact-title">Contact</h2>
-              <form className="form" onSubmit={submitEmail}>
+              <form className="form" onSubmit={submitEmail} ref={form as any}>
                 <input
                   type="text"
-                  value={name}
-                  onChange={changeHandler}
-                  name="name"
+                  name="user_name"
                   placeholder="Your Name"
                   className="form-input"
+                  required
                 />
                 <input
                   type="email"
-                  value={email}
-                  onChange={changeHandler}
-                  name="email"
+                  name="user_email"
                   placeholder="mark@icloud.com"
                   className="form-input"
+                  required
                 />
                 <textarea
                   name="message"
-                  value={message}
-                  onChange={changeHandler as any}
                   placeholder="Your Message..."
-                  className="form-textarea" 
+                  className="form-textarea"
+                  required
                 />
-                <button className="form-btn">REACH ME</button>
+                <button className="form-btn">{loading ? "Loading..." : "REACH ME"}</button>
               </form>
             </div>
 
@@ -236,11 +210,11 @@ export default function Home() {
       </div>
       {isSubmitted && <Modal error={false} onClose={setIsSubmitted} />}
       {error && <Modal errorMessage={error} error={true} onClose={setError} />}
-      <div className="circle-blur" id="circle-1"/>
-      <div className="circle-blur" id="circle-2"/>
-      <div className="circle-blur" id="circle-3"/>
-      <div className="circle-blur" id="circle-4"/>
-      <div className="circle-blur" id="circle-5"/>
+      <div className="circle-blur" id="circle-1" />
+      <div className="circle-blur" id="circle-2" />
+      <div className="circle-blur" id="circle-3" />
+      <div className="circle-blur" id="circle-4" />
+      <div className="circle-blur" id="circle-5" />
     </>
   );
 }
