@@ -5,6 +5,8 @@ import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import Modal from "@/app/components/Modal";
 
+import {Link} from 'react-scroll';
+
 import emailjs from "@emailjs/browser";
 
 import { useState, useRef, useEffect } from "react";
@@ -47,7 +49,7 @@ export default function Home() {
     <>
       <Meta title="Mark Inger" />
       <div className="flex flex-col items-center justify-center w-[100%]">
-        <div className="container">
+        <div className="container nav">
           <Navbar />
         </div>
 
@@ -70,13 +72,13 @@ export default function Home() {
               </div>
               <div className="first-left-mid mb-[10px]">
                 <p className="sub-title">
-                  Experienced Web-Developer who’s here to help you promote and
-                  improve your business. Together we’ll build the most powerful
+                  Experienced Web-Developer who{"'"}s here to help you promote and
+                  improve your business. Together we{"'"}ll build the most powerful
                   and modern website
                 </p>
               </div>
               <div className="first-left-bottom">
-                <button className="action-btn">CONTACT ME</button>
+                <Link to="contact" spy={true} smooth={true} offset={50} duration={800}><button className="action-btn">CONTACT ME</button></Link>
               </div>
             </div>
 
@@ -135,7 +137,7 @@ export default function Home() {
               <div className="second-section-item">
                 <p className="stage-title">ANALYSE</p>
                 <p className="stage-descr">
-                  On this stage I’ll understand your needs and we will discuss
+                  On this stage I{"'"}ll understand your needs and we will discuss
                   all the details about your project
                 </p>
               </div>
@@ -151,7 +153,7 @@ export default function Home() {
               <div className="second-section-item ml-[60px]">
                 <p className="stage-title">DEVELOPMENT & DEPLOY</p>
                 <p className="stage-descr">
-                  At this stage we’re going to finish what we’ve started and
+                  At this stage we{"'"}re going to finish what we{"'"}ve started and
                   turn your imaginations into reality
                 </p>
               </div>
@@ -197,8 +199,8 @@ export default function Home() {
                 height={288}
               />
               <p className="contact-descr">
-                AFTER I’LL SEE YOUR MESSAGE I’M GOING TO REACH YOU BACK ASAP TO
-                DISCUSS OUR FURTHER PARTNERSHIP. I’LL DO MY BEST TO PROVIDE YOU
+                AFTER I{"'"}LL SEE YOUR MESSAGE I{"'"}M GOING TO REACH YOU BACK ASAP TO
+                DISCUSS OUR FURTHER PARTNERSHIP. I{"'"}LL DO MY BEST TO PROVIDE YOU
                 WITH THE BEST SERVICE
               </p>
             </div>
@@ -215,6 +217,6 @@ export default function Home() {
       <div className="circle-blur" id="circle-3" />
       <div className="circle-blur" id="circle-4" />
       <div className="circle-blur" id="circle-5" />
-    </>
+      </>
   );
 }
