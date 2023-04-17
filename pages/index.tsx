@@ -5,7 +5,7 @@ import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import Modal from "@/app/components/Modal";
 
-import {Link} from 'react-scroll';
+import { Link } from "react-scroll";
 
 import emailjs from "@emailjs/browser";
 
@@ -17,21 +17,26 @@ export default function Home() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const form =  useRef<HTMLInputElement>();
+  const form = useRef<HTMLInputElement>();
 
   const submitEmail = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const currentForm = form.current as any || null;
-    
+    const currentForm = (form.current as any) || null;
+
     try {
       setLoading(true);
       setError("");
-      await emailjs.sendForm(service, template_id, form.current as any, public_key);
+      await emailjs.sendForm(
+        service,
+        template_id,
+        form.current as any,
+        public_key
+      );
       setIsSubmitted(true);
       setLoading(false);
 
       currentForm.reset();
-    } catch(err: any) {
+    } catch (err: any) {
       setLoading(false);
       setError(err.text);
     }
@@ -58,10 +63,10 @@ export default function Home() {
             <div className="first-section-left">
               <div className="first-left-top self-start flex">
                 <h1 className="h1-title">
-                  Hello, <br />I{"'"}m Mark
-                  <div className="mt-[73px] ml-[15px]">
+                  Hello, I{"'"}m Mark
+                  <div className="emoji">
                     <Image
-                      className="emoji"
+                      className="emoji clean-z"
                       src="/emojis/waving_hand.svg"
                       alt="emoji"
                       width={50}
@@ -71,14 +76,22 @@ export default function Home() {
                 </h1>
               </div>
               <div className="first-left-mid mb-[10px]">
-                <p className="sub-title">
-                  Experienced Web-Developer who{"'"}s here to help you promote and
-                  improve your business. Together we{"'"}ll build the most powerful
-                  and modern website
+                <p className="sub-title clean-z">
+                  Experienced Web-Developer who{"'"}s here to help you promote
+                  and improve your business. Together we{"'"}ll build the most
+                  powerful and modern website
                 </p>
               </div>
               <div className="first-left-bottom">
-                <Link to="contact" spy={true} smooth={true} offset={50} duration={800}><button className="action-btn">CONTACT ME</button></Link>
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={800}
+                >
+                  <button className="action-btn">CONTACT ME</button>
+                </Link>
               </div>
             </div>
 
@@ -88,12 +101,12 @@ export default function Home() {
                 Technologies
               </h2>
               <div className="first-mid-techs">
-                <i className="devicon-react-original icon" />
-                <i className="devicon-nextjs-line icon" />
-                <i className="devicon-typescript-plain icon"></i>
                 <i className="devicon-javascript-plain icon"></i>
+                <i className="devicon-typescript-plain icon"></i>
                 <i className="devicon-html5-plain icon"></i>
                 <i className="devicon-css3-plain icon"></i>
+                <i className="devicon-react-original icon" />
+                <i className="devicon-nextjs-line icon" />
                 <i className="devicon-sass-original icon"></i>
                 <i className="devicon-git-plain icon"></i>
               </div>
@@ -112,6 +125,25 @@ export default function Home() {
         </div>
 
         <div className="container">
+          <div className="techs-adaptive">
+            <h2 className="h2-title">
+              My Skills &
+              Technologies
+            </h2>
+            <div className="first-mid-techs">
+              <i className="devicon-javascript-plain icon"></i>
+              <i className="devicon-typescript-plain icon"></i>
+              <i className="devicon-html5-plain icon"></i>
+              <i className="devicon-css3-plain icon"></i>
+              <i className="devicon-react-original icon" />
+              <i className="devicon-nextjs-line icon" />
+              <i className="devicon-sass-original icon"></i>
+              <i className="devicon-git-plain icon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
           <div className="second-section">
             <div className="second-section-top">
               <h2 className="h2-second-title">Project Process</h2>
@@ -123,26 +155,18 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="second-section-bottom">
-              <div className="progress-bar">
-                <div className="progress-item">01</div>
-                <div className="progress-line" />
-                <div className="progress-item">02</div>
-                <div className="progress-line-2" />
-                <div className="progress-item">03</div>
-              </div>
-            </div>
-
             <div className="progress-content">
               <div className="second-section-item">
+                <div className="progress-item">01</div>
                 <p className="stage-title">ANALYSE</p>
                 <p className="stage-descr">
-                  On this stage I{"'"}ll understand your needs and we will discuss
-                  all the details about your project
+                  On this stage I{"'"}ll understand your needs and we will
+                  discuss all the details about your project
                 </p>
               </div>
 
               <div className="second-section-item ml-[60px]">
+                <div className="progress-item">02</div>
                 <p className="stage-title">UI/UX</p>
                 <p className="stage-descr">
                   What users see above all is the visual product. On this stage
@@ -151,10 +175,11 @@ export default function Home() {
               </div>
 
               <div className="second-section-item ml-[60px]">
-                <p className="stage-title">DEVELOPMENT & DEPLOY</p>
+                <div className="progress-item">03</div>
+                <p className="stage-title">DEVELOPMENT</p>
                 <p className="stage-descr">
-                  At this stage we{"'"}re going to finish what we{"'"}ve started and
-                  turn your imaginations into reality
+                  At this stage we{"'"}re going to finish what we{"'"}ve started
+                  and turn your imaginations into reality
                 </p>
               </div>
             </div>
@@ -186,7 +211,9 @@ export default function Home() {
                   className="form-textarea"
                   required
                 />
-                <button className="form-btn">{loading ? "Loading..." : "REACH ME"}</button>
+                <button className="form-btn">
+                  {loading ? "Loading..." : "REACH ME"}
+                </button>
               </form>
             </div>
 
@@ -195,13 +222,13 @@ export default function Home() {
                 className="contact-img"
                 src="/Rectangle.svg"
                 alt="memoji"
-                width={288}
-                height={288}
+                width={240}
+                height={240}
               />
               <p className="contact-descr">
-                AFTER I{"'"}LL SEE YOUR MESSAGE I{"'"}M GOING TO REACH YOU BACK ASAP TO
-                DISCUSS OUR FURTHER PARTNERSHIP. I{"'"}LL DO MY BEST TO PROVIDE YOU
-                WITH THE BEST SERVICE
+                AFTER I{"'"}LL SEE YOUR MESSAGE I{"'"}M GOING TO REACH YOU BACK
+                ASAP TO DISCUSS OUR FURTHER PARTNERSHIP. I{"'"}LL DO MY BEST TO
+                PROVIDE YOU WITH THE BEST SERVICE
               </p>
             </div>
           </div>
@@ -217,6 +244,6 @@ export default function Home() {
       <div className="circle-blur" id="circle-3" />
       <div className="circle-blur" id="circle-4" />
       <div className="circle-blur" id="circle-5" />
-      </>
+    </>
   );
 }

@@ -1,0 +1,10 @@
+.bar-wrapper {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 50;
+  height: 6px;
+  background: rgb(255,73,73);
+  background: linear-gradient(90deg, rgba(255,73,73,1) 0%, rgba(252,176,69,1) 100%);
+}

@@ -15,8 +15,8 @@ function Project(props: Props) {
   const { title, description, tech, image, links, index } = props.project;
 
   return (
-    <div className="project-wrapper">
-      <div className="project-details">
+    <div className="project-wrapper clean-z">
+      <div className="project-details clean-z">
         <h2 className="project-title">{title}</h2>
         <p className="project-description">{description}</p>
         <div className="project-tech">
@@ -41,7 +41,7 @@ function Project(props: Props) {
         <div className="project-links">
           <a className="clean-z" href={links[0]} target="_blank">
             <div className="project-link">
-              <Image className="clean-z" src="/icons/vercel.svg" alt="vercel icon" width={34} height={34} />
+              <Image className="clean-z" src="/icons/vercel.svg" alt="vercel icon" width={40} height={40} />
               <p className="links-title">View Demo</p>
             </div>
           </a>

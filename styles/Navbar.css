@@ -18,11 +18,14 @@ nav {
 }
 
 .nav-menu {
-  margin-left: 180px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  width: 380px;
+  justify-content: space-between;
+  width: 300px;
+  background: rgb(1, 1, 1, 0);
+  z-index: 10;
 }
 
 .nav-menu-item {
@@ -30,18 +33,31 @@ nav {
   font-weight: medium;
   font-size: 20px;
   padding-bottom: 5px;
+  background: rgb(1, 1, 1, 0);
+  z-index: 10;
 }
 
 .nav-location {
   cursor: pointer;
-  margin-left: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: medium;
   font-size: 20px;
+  background: rgb(1, 1, 1, 0);
+  z-index: 10;
 }
 
 .active {
   border-bottom: 2px solid white;
+  background: rgb(1, 1, 1, 0);
+  z-index: 10;
+}
+
+.adaptive-menu {
+  display: none;
+}
+
+.adaptive-burger {
+  display: none;
 }
