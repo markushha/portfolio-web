@@ -70,14 +70,7 @@ function Navbar() {
       </div>
 
       <div className="adaptive-burger clean-z" onClick={handleBurger}>
-        
-          {!burger && (
-            <CSSTransition
-              in={!burger}
-              timeout={500}
-              classNames={"fade"}
-              unmountOnExit
-            >
+        {!burger && (
             <Image
               className="clean-z"
               src="/icons/hamburger.svg"
@@ -85,15 +78,8 @@ function Navbar() {
               width={24}
               height={24}
             />
-            </CSSTransition>
-          )}
-          {burger && (
-            <CSSTransition
-            in={burger}
-            timeout={500}
-            classNames={"fade"}
-            unmountOnExit
-          >
+        )}
+        {burger && (
             <Image
               className="clean-z"
               src="/icons/close-bar.svg"
@@ -101,11 +87,8 @@ function Navbar() {
               width={24}
               height={24}
             />
-                        </CSSTransition>
-          )}
-
+        )}
       </div>
-
       {burger && (
         <div className="adaptive-menu">
           <Link className="clean-z" href="/">

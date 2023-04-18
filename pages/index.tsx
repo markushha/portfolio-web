@@ -60,6 +60,16 @@ export default function Home() {
 
         <div className="container">
           <div className="first-section">
+          <div className="first-section-adaptive">
+              <Image
+                className="first-image"
+                src={"/memoji.svg"}
+                alt="photo"
+                width={160}
+                height={160}
+              />
+            </div>
+
             <div className="first-section-left">
               <div className="first-left-top self-start flex">
                 <h1 className="h1-title">
@@ -75,14 +85,14 @@ export default function Home() {
                   </div>
                 </h1>
               </div>
-              <div className="first-left-mid mb-[10px]">
+              <div className="first-left-mid">
                 <p className="sub-title clean-z">
                   Experienced Web-Developer who{"'"}s here to help you promote
                   and improve your business. Together we{"'"}ll build the most
                   powerful and modern website
                 </p>
               </div>
-              <div className="first-left-bottom">
+              <div className="first-left-bottom clean-z">
                 <Link
                   to="contact"
                   spy={true}
@@ -90,7 +100,7 @@ export default function Home() {
                   offset={50}
                   duration={800}
                 >
-                  <button className="action-btn">CONTACT ME</button>
+                  <button className="action-btn clean-z">CONTACT ME</button>
                 </Link>
               </div>
             </div>

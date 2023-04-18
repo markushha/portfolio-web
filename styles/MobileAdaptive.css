@@ -59,32 +59,14 @@
   }
 
   .adaptive-menu {
+    background: rgba(65, 65, 65, 0.5);
+    padding: 10px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 40px;
-    right: 10px;
-    transition: 0.2s ease all;
-  }
-
-  .fade-enter {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  .fade-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    transition: 0.2s ease all;
-  }
-
-  .fade-exit {
-    opacity: 1;
-  }
-
-  .fade-exit-active {
-    opacity: 0;
-    transform: scale(0.9);
+    top: 50px;
+    margin-left: 270px;
     transition: 0.2s ease all;
   }
 }
@@ -98,6 +80,7 @@
 @media screen and (max-width: 600px) {
   .first-section {
     display: flex;
+    flex-direction: column;
     width: 100%;
     margin-top: 50px;
   }
@@ -108,6 +91,13 @@
     align-items: center;
     width: fit-content;
     align-self: start;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .first-section-adaptive {
+    display: flex;
+    margin: 0 auto 10px auto;
   }
   
   .emoji {
@@ -118,7 +108,7 @@
   }
   
   .h1-title {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     display: flex;
     position: relative;
@@ -129,7 +119,7 @@
   
   .h2-title {
     margin: auto 0;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
     z-index: 1;
@@ -137,12 +127,12 @@
   }
   
   .sub-title {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
   }
   
   .first-left-mid {
-    width: 188px;
+    width: 205px;
     align-self: start;
     margin-top: 5px;
     margin: auto 0;
@@ -150,6 +140,7 @@
   
   .first-left-bottom {
     margin-top: 10px;
+    margin: 10px auto 0px auto;
     align-self: start;
   }
   
@@ -163,37 +154,17 @@
   .action-btn {
     width: 108px;
     height: 27px;
-    border-radius: 5px;
-    color: #fff;
-    background: #6947EF;
     font-size: 10px;
-    font-weight: 400;
-    transition: 0.2s ease all;
-  }
-  
-  .action-btn:hover {
-    background: #8A61FF;
   }
   
   .first-mid-techs {
     margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
     width: 240px;
+    margin: 20px auto 0 auto;
   }
   
   .icon {
     font-size: 40px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-    background-color: rgb(1, 1, 1, 0);
-  }
-  
-  .first-section-right {
-    display: flex;
-    margin: auto;
   }
   
   .first-image {
@@ -206,6 +177,8 @@
   }
 
   .techs-adaptive {
+    text-align: center;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -230,7 +203,9 @@
     display: flex;
     flex-direction: column;
     align-self: start;
-    width: 133px;
+    width: 165px;
+    text-align: center;
+    margin: 0 auto;
   }
   
   .line {
@@ -241,7 +216,7 @@
   }
   
   .h2-second-title {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0);
@@ -264,11 +239,12 @@
     background: #fff;
     border-radius: 50%;
     margin-bottom: 2px;
+    margin: 0px auto 3px auto;
     color: black;
     font-weight: bold;
-    font-size: 15px;
-    width: 30px;
-    height: 30px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,12 +254,13 @@
   .second-section-item {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    width: 88px;
+    width: 205px;
+    margin: 10px auto 20px auto;
+    text-align: center;
   }
   
   .stage-title {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 600;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0);
@@ -291,7 +268,7 @@
   }
   
   .stage-descr {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
     margin-top: 5px;
     z-index: 10;
@@ -301,6 +278,7 @@
   
   .progress-content {
     display: flex;
+    flex-direction: column;
     margin-top: 15px;
   }
 
@@ -312,18 +290,20 @@
   
   .contact {
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
   }
   
   .contact-form {
     display: flex;
+    margin: 0 auto;
+    text-align: center;
     flex-direction: column;
   }
   
   .contact-title {
     margin-top: 0px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0)
@@ -338,12 +318,12 @@
   }
   
   .form-input {
-    width: 150px;
+    width: 200px;
     height: 35px;
     border-radius: 5px;
     border: 1px solid white;
     outline: none;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 400;
     padding: 0 10px;
     margin-bottom: 20px;
@@ -357,12 +337,12 @@
   }
   
   .form-textarea {
-    width: 150px;
+    width: 200px;
     height: 100px;
     border-radius: 5px;
     border: 1px solid white;
     outline: none;
-    font-size: 10px;
+    font-size:  15px;
     font-weight: 400;
     padding: 10px 10px;
     margin-bottom: 20px;
@@ -376,13 +356,13 @@
   }
   
   .form-btn {
-    width: 150px;
-    height: 30px;
+    margin-top: auto;
+    width: 200px;
+    height: 4g0px;
     border-radius: 5px;
     border: 1px solid white;
-    font-size: 10px;
+    font-size:  15px;
     font-weight: 400;
-    margin-top: 17px;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     transition: 0.3s ease all;
@@ -393,7 +373,7 @@
   }
   
   .contact-right {
-    display: flex;
+    display: none;
     flex-direction: column;
     margin: auto 0 auto auto;
     width: 165px;

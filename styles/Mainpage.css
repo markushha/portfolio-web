@@ -12,6 +12,10 @@
   align-self: start;
 }
 
+.first-section-adaptive {
+  display: none;
+}
+
 .emoji {
   margin-left: 73px;
   margin-top: 15px;
