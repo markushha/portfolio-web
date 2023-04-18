@@ -133,11 +133,63 @@
 /* adaptive */
 
 @media screen and (max-width: 1100px) {
-  .project-img {
-
-  }
-
   .links-title {
     font-size: 18px;
   }
+}
+
+/* MOBILE adaptive */
+
+@media screen and (max-width: 700px) {
+    .project-wrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto 130px auto;
+    }
+
+    .links-title {
+      font-size: 12px;
+    }
+
+    .project-img {
+      margin: 0px 0 0px 0;
+      padding: 10px 15px;
+    }
+
+    .project-link {
+      background: rgba(1, 1, 1, 0);
+      align-items: center;
+      text-align: center;
+      display: flex;
+      font-size: 10px;
+      color: white;
+      margin-bottom: 10px;
+      margin-right: 20px;
+      height: 30px;
+      z-index: 10;
+    }
+
+    .project-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-icon {
+      margin-right: 20px;
+    }
+
+    .project-details {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .project-description {
+      margin-bottom: 10px;
+    }
+
+    .project-tech {
+      display: none;
+    }
 }

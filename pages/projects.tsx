@@ -1,3 +1,4 @@
+import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import Project from "@/app/components/Project";
 import Meta from "@/app/utils/Meta";
@@ -44,6 +45,9 @@ function Projects(props: Props) {
         })}
         </div>
         <div className="circle-blur" id="circle-proj-1"/>
+      </div>
+      <div className="container">
+        <Footer />
       </div>
     </>
   )

@@ -41,14 +41,14 @@ function Project(props: Props) {
         <div className="project-links">
           <a className="clean-z" href={links[0]} target="_blank">
             <div className="project-link">
-              <Image className="clean-z" src="/icons/vercel.svg" alt="vercel icon" width={40} height={40} />
+              <Image className="clean-z link-img" src="/icons/vercel.svg" alt="vercel icon" width={35} height={35} />
               <p className="links-title">View Demo</p>
             </div>
           </a>
 
           <a className="clean-z" href={links[1]} target="_blank">
             <div className="project-link">
-              <Image className="clean-z" src="/icons/github.svg" alt="github icon" width={40} height={40} />
+              <Image className="clean-z link-img" src="/icons/github.svg" alt="github icon" width={35} height={35} />
               <p className="links-title">Visit Repo</p>
             </div>
           </a>
