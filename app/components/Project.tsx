@@ -17,8 +17,12 @@ function Project(props: Props) {
   return (
     <div className="project-wrapper clean-z">
       <div className="project-details clean-z">
-        <h2 className="project-title">{title}</h2>
-        <p className="project-description">{description}</p>
+        <div className="project-details-title">
+          <h2 className="project-title">{title}</h2>
+          <p className="project-description">{description}</p>
+        </div>
+        <div className="project-tech-wrapper">
+        <p className="project-tech-title">Tech Stack</p>
         <div className="project-tech">
           {tech.map((tech) => {
             return (
@@ -28,32 +32,45 @@ function Project(props: Props) {
             );
           })}
         </div>
+        </div>
       </div>
 
       <div className="project-demo">
-        <Image
-          className="project-img"
-          src={image}
-          alt={`${title} image`}
-          width={759}
-          height={368}
-        />
-        <div className="project-links">
-          <a className="clean-z" href={links[0]} target="_blank">
-            <div className="project-link">
-              <Image className="clean-z link-img" src="/icons/vercel.svg" alt="vercel icon" width={35} height={35} />
-              <p className="links-title">View Demo</p>
-            </div>
-          </a>
+          <Image
+            className="project-img"
+            src={image}
+            alt={`${title} image`}
+            width={759}
+            height={368}
+          />
+          <div className="project-links">
+            <a className="clean-z" href={links[0]} target="_blank">
+              <div className="project-link">
+                <Image
+                  className="clean-z link-img"
+                  src="/icons/vercel.svg"
+                  alt="vercel icon"
+                  width={35}
+                  height={35}
+                />
+                <p className="links-title">View Demo</p>
+              </div>
+            </a>
 
-          <a className="clean-z" href={links[1]} target="_blank">
-            <div className="project-link">
-              <Image className="clean-z link-img" src="/icons/github.svg" alt="github icon" width={35} height={35} />
-              <p className="links-title">Visit Repo</p>
-            </div>
-          </a>
+            <a className="clean-z" href={links[1]} target="_blank">
+              <div className="project-link">
+                <Image
+                  className="clean-z link-img"
+                  src="/icons/github.svg"
+                  alt="github icon"
+                  width={35}
+                  height={35}
+                />
+                <p className="links-title">Visit Repo</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
     </div>
   );
 }
