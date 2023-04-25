@@ -4,6 +4,7 @@ import "@/styles/Mainpage.css";
 import "@/styles/Modal.css";
 import "@/styles/Projects.css";
 import "@/styles/Progress.css";
+import "@/styles/Socials.css";
 
 import '@/styles/MobileAdaptive.css';
 
