@@ -3,15 +3,12 @@ import Navbar from "@/app/components/Navbar";
 import Project from "@/app/components/Project";
 import Meta from "@/app/utils/Meta";
 
-interface Props {}
-
-function Projects(props: Props) {
-  const {} = props
+function Projects() {
 
   const projects = [
     {
       title: "Home Link",
-      description: "Home Link - is an axis incident-manager website. All complex residents can view all stuff contacts and send an application if something was broken online.",
+      description: "Home Link - is an axis incident-manager website. All complex residents can view all stuff contacts and send an application if something was broken online",
       tech: ["react", "nextjs", "js", "mongodb", "tailwind", "git"],
       image: "/home-link.svg",
       links: ["https://home-link.vercel.app/", "https://github.com/markushha/Home-Link"],
@@ -19,7 +16,7 @@ function Projects(props: Props) {
     },
     {
       title: "E-Commerce Web App",
-      description: "A simple React e-commerce web app with a shopping cart and realized search bar & filters. I made it in 24 hours for a job interview.",
+      description: "A simple React e-commerce web app with a shopping cart and realized search bar & filters. I made it in 24 hours for a job interview",
       tech: ["react", "js", "tailwind", "scss" ,"git"],
       image: "/e-commerce.svg",
       links: ["https://starfund-e-commerce.vercel.app/", "https://github.com/markushha/E-Commerce-Web"],
@@ -44,7 +41,6 @@ function Projects(props: Props) {
           return <Project key={project.index} project={project} />
         })}
         </div>
-        <div className="circle-blur" id="circle-proj-1"/>
       </div>
       <div className="container">
         <Footer />

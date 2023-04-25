@@ -249,11 +249,6 @@ export default function Home() {
       </div>
       {isSubmitted && <Modal error={false} onClose={setIsSubmitted} />}
       {error && <Modal errorMessage={error} error={true} onClose={setError} />}
-      <div className="circle-blur" id="circle-1" />
-      <div className="circle-blur" id="circle-2" />
-      <div className="circle-blur" id="circle-3" />
-      <div className="circle-blur" id="circle-4" />
-      <div className="circle-blur" id="circle-5" />
     </>
   );
 }

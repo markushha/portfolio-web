@@ -1,6 +1,6 @@
 /* Navbar */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   nav {
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
   
   .nav-title {
     font-size: 15px;
-    font-weight: medium;
+    font-weight: 500;
     letter-spacing: 6px;
     position: relative;
     display: flex;
@@ -33,7 +33,7 @@
   
   .nav-menu-item {
     z-index: 10;
-    font-weight: medium;
+    font-weight: 500;
     font-size: 10px;
     padding-bottom: 5px;
     background: rgb(1, 1, 1, 0);
@@ -85,6 +85,10 @@
     margin-top: 50px;
   }
   
+  .first-section-right {
+    display: none;
+  }
+  
   .first-section-left {
     display: flex;
     flex-direction: column;
@@ -128,7 +132,7 @@
   
   .sub-title {
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
   }
   
   .first-left-mid {
@@ -223,8 +227,8 @@
   }
   
   .sub-title-second {
-    font-size: 10px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
     margin-top: 5px;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0);
@@ -236,11 +240,9 @@
   }
   
   .progress-item {
-    background: #fff;
     border-radius: 50%;
     margin-bottom: 2px;
     margin: 0px auto 3px auto;
-    color: black;
     font-weight: bold;
     font-size: 20px;
     width: 50px;
@@ -268,8 +270,8 @@
   }
   
   .stage-descr {
-    font-size: 10px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
     margin-top: 5px;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0);
@@ -321,10 +323,9 @@
     width: 200px;
     height: 35px;
     border-radius: 5px;
-    border: 1px solid white;
     outline: none;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 0 10px;
     margin-bottom: 20px;
     z-index: 10;
@@ -332,18 +333,13 @@
     transition: 0.3s ease all;
   }
   
-  .form-input:focus {
-    box-shadow: 0px 5px 15px -5px white;
-  }
-  
   .form-textarea {
     width: 200px;
     height: 100px;
     border-radius: 5px;
-    border: 1px solid white;
     outline: none;
     font-size:  15px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 10px 10px;
     margin-bottom: 20px;
     z-index: 10;
@@ -351,25 +347,16 @@
     transition: 0.3s ease all;
   }
   
-  .form-textarea:focus {
-    box-shadow: 0px 5px 15px -5px white;
-  }
-  
   .form-btn {
     margin-top: auto;
     width: 200px;
-    height: 4g0px;
+    height: 30px;
     border-radius: 5px;
-    border: 1px solid white;
     font-size:  15px;
-    font-weight: 400;
+    font-weight: 500;
     z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     transition: 0.3s ease all;
-  }
-  
-  .form-btn:hover {
-    box-shadow: 0px 5px 15px -5px white;
   }
   
   .contact-right {
@@ -389,7 +376,7 @@
   
   .contact-descr {
     font-size: 10px;
-    font-weight: 400;
+    font-weight: 500;
     text-align: right;
     margin-top: 15px;
     z-index: 10;
@@ -400,7 +387,7 @@
     width: 100%;
     display: flex;
     font-size: 8px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 50px;
     margin-bottom: 10px;
   }
@@ -408,6 +395,4 @@
   .right-side {
     margin-left: auto;
   }
-  
-  
 }

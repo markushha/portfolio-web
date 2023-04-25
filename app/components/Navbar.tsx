@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { CSSTransition } from "react-transition-group";
 
 function Navbar() {
   const [active, setActive] = useState("");
@@ -12,7 +11,9 @@ function Navbar() {
   }, []);
 
   const handleActive = (path: string) => {
-    setActive(path);
+    if (active !== path) {
+      setActive(path);
+    }
   };
 
   const handleBurger = () => {
@@ -30,7 +31,7 @@ function Navbar() {
       <div className="nav-menu">
         <Link className="clean-z" href="/">
           <div
-            onClick={(e) => handleActive("home")}
+            onClick={(e) => handleActive("/")}
             className={`nav-menu-item ${active === "/" ? "active" : ""}`}
           >
             HOME
@@ -38,7 +39,7 @@ function Navbar() {
         </Link>
         <Link className="clean-z" href="/projects">
           <div
-            onClick={(e) => handleActive("projects")}
+            onClick={(e) => handleActive("/projects")}
             className={`nav-menu-item ${
               active === "/projects" ? "active" : ""
             }`}
@@ -48,7 +49,7 @@ function Navbar() {
         </Link>
         <Link className="clean-z" href="/socials">
           <div
-            onClick={(e) => handleActive("socials")}
+            onClick={(e) => handleActive("/socials")}
             className={`nav-menu-item ${active === "/socials" ? "active" : ""}`}
           >
             SOCIALS
