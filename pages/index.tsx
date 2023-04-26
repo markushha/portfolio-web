@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Meta from "@/app/utils/Meta";
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
@@ -199,7 +198,7 @@ export default function Home() {
         <div className="container">
           <div className="contact">
             <div className="contact-form">
-              <h2 className="contact-title">Contact</h2>
+              <h2 className="contact-title">Send me an email</h2>
               <form className="form" onSubmit={submitEmail} ref={form as any}>
                 <input
                   type="text"
@@ -222,7 +221,7 @@ export default function Home() {
                   required
                 />
                 <button className="form-btn">
-                  {loading ? "Loading..." : "REACH ME"}
+                  {loading ? "Loading..." : "SEND"}
                 </button>
               </form>
             </div>

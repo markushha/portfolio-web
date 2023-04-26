@@ -41,10 +41,11 @@ nav {
 }
 
 .nav-location {
+  width: 230px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   font-weight: 500;
   font-size: 20px;
   background: rgb(1, 1, 1, 0);
