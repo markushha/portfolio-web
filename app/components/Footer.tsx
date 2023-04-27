@@ -11,9 +11,9 @@ export default function Footer() {
         offset={50}
         duration={800}
       >
-        <p className="left-side clean-z ">MARK INGER | WEB-DEVELOPER</p>
+        <p className="footer-left-side clean-z ">MARK INGER | WEB-DEVELOPER</p>
       </Link>
-      <p className="right-side clean-z">ALL RIGHTS ARE RESERVED | © 2024</p>
+      <p className="footer-right-side clean-z"><span className="additional-footer">ALL RIGHTS ARE RESERVED |</span> © 2024</p>
     </div>
   );
 }

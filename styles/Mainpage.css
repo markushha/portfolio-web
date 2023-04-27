@@ -1,7 +1,7 @@
 .first-section {
   display: flex;
   width: 100%;
-  margin-top: 173px;
+  margin-top: 150px;
 }
 
 .first-section-left {
@@ -70,14 +70,16 @@
   height: 50px;
   border-radius: 5px;
   color: #fff;
-  background: #6947EF;
-  font-size: 18px;
+  background: #1e1e1e;
+  font-size: 1rgb(0, 0, 0);
   font-weight: 500;
   transition: 0.2s ease all;
+  box-shadow: 0px 5px 15px -5px #8e8e8e;
 }
 
 .action-btn:hover {
-  background: #4823ac;
+  background: #fff;
+  color: #1e1e1e;
 }
 
 .first-mid-techs {
@@ -244,7 +246,7 @@
   transition: 0.3s ease all;
 }
 
-.form-input:focus {
+.form-input:focus, .form-input:active {
   box-shadow: 0px 5px 15px -5px #8e8e8e;
 }
 
@@ -263,7 +265,7 @@
   transition: 0.3s ease all;
 }
 
-.form-textarea:focus {
+.form-textarea:focus, .form-textarea:active {
   box-shadow: 0px 5px 15px -5px #8e8e8e;
 }
 
@@ -311,10 +313,18 @@
   display: flex;
   font-size: 22px;
   font-weight: 500;
-  margin-top: 173px;
+  margin-top: 150px;
   margin-bottom: 30px;
 }
 
-.right-side {
+.footer-left-side {
+  width: fit-content;
+}
+
+.additional-footer {
+  display: block;
+}
+
+.footer-right-side {
   margin-left: auto;
 }

@@ -385,13 +385,18 @@
   .footer {
     width: 100%;
     display: flex;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 500;
     margin-top: 50px;
     margin-bottom: 10px;
   }
   
-  .right-side {
+  .footer-right-side{
     margin-left: auto;
+    width: fit-content;
+  }
+
+  .additional-footer {
+    display: none;
   }
 }

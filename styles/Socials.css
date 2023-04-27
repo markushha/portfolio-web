@@ -22,28 +22,129 @@
   font-weight: 700;
 }
 
+.socials-media-title {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 10px;
+}
+
 .socials-descr {
   font-size: 16px;
+  font-weight: 500;
 }
 
 .socials-body {
+  margin: 0 auto;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .socials-email {
+  box-shadow: 0px 5px 15px -5px #8e8e8e;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   font-size: 20px;
   font-weight: 500;
-  margin-top: 20px;
+  margin: 30px auto 0 auto;
 }
 
-@media screen and (max-width: 600px) {
+.socials-email-title {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.socials-media {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 20px auto 0 auto;
+}
+
+.social-media-contact-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px -5px #8e8e8e;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  transition: 0.15s ease all;
+}
+
+.social-media-contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.social-media-contact-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.social-media-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.social-media-item {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
   .socials-title {
     font-size: 25px;
+  }
+
+  .socials-title {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+
+  .socials-head {
+    margin-top: 50px;
+  }
+
+  .socials-body {
+    margin-top: 10px;
+  }
+
+  .social-media-contact-item {
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px -5px #8e8e8e;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    transition: 0.15s ease all;
+  }
+
+  .socials-media-title {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .socials-subtitle {
+    font-size: 20px;
+  }
+
+  .socials-email-title {
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 600;
   }
 }
