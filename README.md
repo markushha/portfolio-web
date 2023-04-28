@@ -1,5 +1,5 @@
-### This is my portfolio website
-#### it's still developing...
+### This is my portfolio website! It was made for over a week and 
+### it will get updates continiously
 
 ### Tech stack:
 - Next.js for SSR and easy routing
@@ -8,4 +8,4 @@
 - TailwindCSS & Vanil CSS for styling
 - Git for versions control
 
-### Hosting soon
+### You can check it out via this link:
