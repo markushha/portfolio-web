@@ -5,6 +5,7 @@ import "@/styles/Modal.css";
 import "@/styles/Projects.css";
 import "@/styles/Progress.css";
 import "@/styles/Socials.css";
+import "@/styles/Footer.css";
 
 import '@/styles/MobileAdaptive.css';
 

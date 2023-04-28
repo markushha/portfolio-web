@@ -62,7 +62,7 @@ export default function Home() {
           <div className="first-section-adaptive">
               <Image
                 className="first-image"
-                src={"/memoji.svg"}
+                src={"/bio-photo-4.jpg"}
                 alt="photo"
                 width={160}
                 height={160}
@@ -73,15 +73,6 @@ export default function Home() {
               <div className="first-left-top self-start flex">
                 <h1 className="h1-title">
                   Hello, I{"'"}m Mark
-                  <div className="emoji">
-                    <Image
-                      className="emoji clean-z"
-                      src="/emojis/waving_hand.svg"
-                      alt="emoji"
-                      width={50}
-                      height={50}
-                    />
-                  </div>
                 </h1>
               </div>
               <div className="first-left-mid">
@@ -124,7 +115,7 @@ export default function Home() {
             <div className="first-section-right">
               <Image
                 className="first-image"
-                src={"/memoji.svg"}
+                src={"/bio-photo-4.jpg"}
                 alt="photo"
                 width={266}
                 height={266}
@@ -229,7 +220,7 @@ export default function Home() {
             <div className="contact-right">
               <Image
                 className="contact-img"
-                src="/Rectangle.svg"
+                src="/bio-photo.jpg"
                 alt="memoji"
                 width={240}
                 height={240}

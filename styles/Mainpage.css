@@ -78,7 +78,7 @@
 }
 
 .action-btn:hover {
-  background: #fff;
+  background: #e9e9e9;
   color: #1e1e1e;
 }
 
@@ -103,6 +103,7 @@
 }
 
 .first-image {
+  border-radius: 50%;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -294,6 +295,7 @@
 }
 
 .contact-img {
+  border-radius: 50%;
   margin-left: auto;
   z-index: 10;
   background-color: rgb(1, 1, 1, 0);
@@ -303,28 +305,7 @@
   font-size: 20px;
   font-weight: 500;
   text-align: right;
-  margin-top: 50px;
+  margin-top: 20px;
   z-index: 10;
   background-color: rgb(1, 1, 1, 0)
-}
-
-.footer {
-  width: 100%;
-  display: flex;
-  font-size: 22px;
-  font-weight: 500;
-  margin-top: 150px;
-  margin-bottom: 30px;
-}
-
-.footer-left-side {
-  width: fit-content;
-}
-
-.additional-footer {
-  display: block;
-}
-
-.footer-right-side {
-  margin-left: auto;
 }
