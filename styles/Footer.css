@@ -55,3 +55,8 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .footer {
+    font-size: 18px;
+  }
+}
