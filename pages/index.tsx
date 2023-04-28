@@ -4,6 +4,8 @@ import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import Modal from "@/app/components/Modal";
 
+import { SiJavascript, SiTypescript, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiSass, SiGit } from "react-icons/si";
+
 import { Link } from "react-scroll";
 
 import emailjs from "@emailjs/browser";
@@ -101,14 +103,14 @@ export default function Home() {
                 Technologies
               </h2>
               <div className="first-mid-techs">
-                <i className="devicon-javascript-plain icon"></i>
-                <i className="devicon-typescript-plain icon"></i>
-                <i className="devicon-html5-plain icon"></i>
-                <i className="devicon-css3-plain icon"></i>
-                <i className="devicon-react-original icon" />
-                <i className="devicon-nextjs-line icon" />
-                <i className="devicon-sass-original icon"></i>
-                <i className="devicon-git-plain icon"></i>
+                <div className="icon-wrapper"><SiJavascript className="icon" /></div>
+                <div className="icon-wrapper"><SiTypescript className="icon" /></div>
+                <div className="icon-wrapper"><SiHtml5 className="icon" /></div>
+                <div className="icon-wrapper"><SiCss3 className="icon" /></div>
+                <div className="icon-wrapper"><SiReact className="icon" /></div>
+                <div className="icon-wrapper"><SiNextdotjs className="icon" /></div>
+                <div className="icon-wrapper"><SiSass className="icon" /></div>
+                <div className="icon-wrapper"><SiGit className="icon" /></div>
               </div>
             </div>
 
@@ -131,14 +133,14 @@ export default function Home() {
               Technologies
             </h2>
             <div className="first-mid-techs">
-              <i className="devicon-javascript-plain icon"></i>
-              <i className="devicon-typescript-plain icon"></i>
-              <i className="devicon-html5-plain icon"></i>
-              <i className="devicon-css3-plain icon"></i>
-              <i className="devicon-react-original icon" />
-              <i className="devicon-nextjs-line icon" />
-              <i className="devicon-sass-original icon"></i>
-              <i className="devicon-git-plain icon"></i>
+              <SiJavascript className="icon" />
+              <SiTypescript className="icon" />
+              <SiHtml5 className="icon" />
+              <SiCss3 className="icon" />
+              <SiReact className="icon" />
+              <SiNextdotjs className="icon" />
+              <SiSass className="icon" />
+              <SiGit className="icon" />
             </div>
           </div>
         </div>

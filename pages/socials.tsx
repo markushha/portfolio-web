@@ -21,12 +21,12 @@ function Socials(props: Props) {
     <>
       <div className="container">
         <Navbar />
-        <Meta title="Socials Me" />
+        <Meta title="Socials" />
       </div>
 
       <div className="container">
         <div className="socials-head">
-          <p className="socials-title">Where you can<br/>find me</p>
+          <p className="socials-title">Where you can find me</p>
         </div>
       </div>
 

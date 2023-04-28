@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 function Navbar() {
   const [active, setActive] = useState("");

@@ -11,10 +11,10 @@ export default function Footer() {
   return (
     <div className="footer clean-z">
       <Link
-        className="cursor-pointer clean-z"
+        className="footer-left-side cursor-pointer clean-z"
         href="/"
       >
-        <p className="footer-left-side clean-z">MARK INGER<span className="additional-footer">| WEB-DEVELOPER</span></p>
+        <p className="flex clean-z">MARK INGER<span className="ml-2 additional-footer">| WEB-DEVELOPER</span></p>
       </Link>
 
       <div className="footer-socials">

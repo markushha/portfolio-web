@@ -12,6 +12,8 @@
 }
 
 .socials-title {
+  margin: 0 auto;
+  width: 70%;
   font-size: 45px;
   text-align: center;
   font-weight: 700;
@@ -84,7 +86,7 @@
 }
 
 .social-media-contact-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-7px);
 }
 
 .social-media-contact-title {

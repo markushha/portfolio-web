@@ -21,6 +21,7 @@
 }
 
 .footer-left-side {
+  width: 40%;
   display: flex;
 }
 
@@ -30,6 +31,8 @@
 }
 
 .footer-right-side {
+  justify-content: flex-end;
+  width: 40%;
   display: flex;
 }
 
