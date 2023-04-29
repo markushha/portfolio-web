@@ -37,6 +37,12 @@
 }
 
 /* footer adaptive */
+@media screen and (max-width: 1440px) {
+  .footer {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .footer {
     font-size: 12px;
@@ -52,11 +58,5 @@
 
   .additional-footer {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .footer {
-    font-size: 18px;
   }
 }
