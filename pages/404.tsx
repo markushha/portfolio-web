@@ -8,10 +8,10 @@ const NotFound = () => {
       <Meta title="Not Found :(" />
       <div className="container">
         <div className="h-[100vh] items-center flex flex-col justify-center m-auto w-[60%]">
-          <p className="text-3xl font-[500] text-center mb-4">
+          <p className="xxs:text-xl  text-3xl font-[500] text-center mb-4">
             404 - Not Found
           </p>
-          <p className="text-3xl font-[500] text-center">
+          <p className="xxs:text-xl text-3xl font-[500] text-center">
             It looks like you{"'"}re looking for something that do not exist...
             May be it will one day? Or is this that you were trying to find?
           </p>

@@ -62,17 +62,17 @@ function Navbar() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="w-4 h-4"
           >
             <path
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
             />
             <path
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
             />
@@ -88,12 +88,12 @@ function Navbar() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-4 h-4"
             >
               <path
-                stroke-linecap="round"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
@@ -106,12 +106,12 @@ function Navbar() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-4 h-4"
             >
               <path
-                stroke-linecap="round"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 d="M6 18L18 6M6 6l12 12"
               />

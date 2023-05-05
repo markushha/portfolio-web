@@ -178,28 +178,26 @@
       max-height: 50px;
     }
 
-    
-
     .proj-svg {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
     }
 
     .project-head {
       display: flex;
-      margin: 0 auto;
+      margin: 50px auto 0;
       justify-content: center;
       align-items: center;
     }
 
     .projects-h1 {
-      margin-top: 50px;
-      font-size: 25px;
+      margin-top: 0;
+      font-size: 30px;
       text-align: center;
     }
 
     .project-description {
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
     }
 
@@ -229,7 +227,7 @@
     }
 
     .project-title {
-      font-size: 20px;
+      font-size: 25px;
       text-align: center;
       margin-bottom: 5px;
     }
@@ -245,7 +243,7 @@
     }
 
     .project-details-title {
-      width: 180px;
+      width: 200px;
     }
 
     .project-description {

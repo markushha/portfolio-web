@@ -66,8 +66,8 @@ export default function Home() {
                 className="first-image"
                 src={"/bio-photo-4.jpg"}
                 alt="photo"
-                width={160}
-                height={160}
+                width={200}
+                height={200}
               />
             </div>
 
