@@ -7,5 +7,3 @@
 - Email.js for authomatic email sending
 - TailwindCSS & Vanil CSS for styling
 - Git for versions control
-
-### You can check it out via this link:
