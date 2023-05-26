@@ -4,7 +4,16 @@ import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import Modal from "@/app/components/Modal";
 
-import { SiJavascript, SiTypescript, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiSass, SiGit } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiNextdotjs,
+  SiSass,
+  SiGit,
+} from "react-icons/si";
 
 import { Link } from "react-scroll";
 
@@ -12,6 +21,7 @@ import emailjs from "@emailjs/browser";
 
 import { useState, useRef, useEffect } from "react";
 import { service, template_id, public_key } from ".././config";
+import Layout from "@/app/components/layout/Layout";
 
 export default function Home() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -52,16 +62,11 @@ export default function Home() {
   }, [isSubmitted]);
 
   return (
-    <>
-      <Meta title="Mark Inger" />
-      <div className="flex flex-col items-center justify-center w-[100%]">
-        <div className="container nav">
-          <Navbar />
-        </div>
-
+    <Layout title="Mark Inger Dev" description="Front-End Engineer - Mark Inger">
+      <div className="flex flex-col items-center justify-center w-[100">
         <div className="container">
           <div className="first-section">
-          <div className="first-section-adaptive">
+            <div className="first-section-adaptive">
               <Image
                 className="first-image"
                 src={"/bio-photo-4.jpg"}
@@ -73,9 +78,7 @@ export default function Home() {
 
             <div className="first-section-left">
               <div className="first-left-top self-start flex">
-                <h1 className="h1-title">
-                  Hello, I{"'"}m Mark
-                </h1>
+                <h1 className="h1-title">Hello, I{"'"}m Mark</h1>
               </div>
               <div className="first-left-mid">
                 <p className="sub-title clean-z">
@@ -103,14 +106,30 @@ export default function Home() {
                 Technologies
               </h2>
               <div className="first-mid-techs">
-                <div className="icon-wrapper"><SiJavascript className="icon" /></div>
-                <div className="icon-wrapper"><SiTypescript className="icon" /></div>
-                <div className="icon-wrapper"><SiHtml5 className="icon" /></div>
-                <div className="icon-wrapper"><SiCss3 className="icon" /></div>
-                <div className="icon-wrapper"><SiReact className="icon" /></div>
-                <div className="icon-wrapper"><SiNextdotjs className="icon" /></div>
-                <div className="icon-wrapper"><SiSass className="icon" /></div>
-                <div className="icon-wrapper"><SiGit className="icon" /></div>
+                <div className="icon-wrapper">
+                  <SiJavascript className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiTypescript className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiHtml5 className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiCss3 className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiReact className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiNextdotjs className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiSass className="icon" />
+                </div>
+                <div className="icon-wrapper">
+                  <SiGit className="icon" />
+                </div>
               </div>
             </div>
 
@@ -128,10 +147,7 @@ export default function Home() {
 
         <div className="container">
           <div className="techs-adaptive">
-            <h2 className="h2-title">
-              My Skills &
-              Technologies
-            </h2>
+            <h2 className="h2-title">My Skills & Technologies</h2>
             <div className="first-mid-techs">
               <SiJavascript className="icon" />
               <SiTypescript className="icon" />
@@ -235,12 +251,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container">
-          <Footer />
-        </div>
       </div>
       {isSubmitted && <Modal error={false} onClose={setIsSubmitted} />}
       {error && <Modal errorMessage={error} error={true} onClose={setError} />}
-    </>
+    </Layout>
   );
 }

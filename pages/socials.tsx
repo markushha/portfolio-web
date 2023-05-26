@@ -1,5 +1,4 @@
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
+import Layout from "@/app/components/layout/Layout";
 
 import Meta from "@/app/utils/Meta";
 import {
@@ -12,18 +11,12 @@ import { RiTelegramLine } from "react-icons/ri";
 
 import Link from "next/link";
 
-interface Props {}
-
-function Socials(props: Props) {
-  const {} = props;
-
+function Socials() {
   return (
-    <>
-      <div className="container">
-        <Navbar />
-        <Meta title="Socials" />
-      </div>
-
+    <Layout
+      title="Contact Me"
+      description="Contact Front-End Engineer Mark Inger"
+    >
       <div className="container">
         <div className="socials-head">
           <p className="socials-title">Where you can find me</p>
@@ -94,7 +87,9 @@ function Socials(props: Props) {
 
             <div className="socials-email">
               <p className="socials-subtitle">Email Me</p>
-              <a href="mailto:mark@starfund.app"><p className="socials-email-title">mark@starfund.app</p></a>
+              <a href="mailto:mark@starfund.app">
+                <p className="socials-email-title">mark@starfund.app</p>
+              </a>
               <p className="socials-descr mt-2 text-left">
                 Mark Inger
                 <br />
@@ -105,11 +100,7 @@ function Socials(props: Props) {
           </div>
         </div>
       </div>
-
-      <div className="container">
-        <Footer />
-      </div>
-    </>
+    </Layout>
   );
 }
 

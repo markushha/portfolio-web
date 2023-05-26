@@ -4,69 +4,74 @@
   nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 36px;
     width: 100%;
     margin-top: 10px;
   }
   
   .nav-title {
+    width: fit-content;
+    text-align: center;
     font-size: 15px;
     font-weight: 500;
-    letter-spacing: 6px;
-    position: relative;
-    display: flex;
-    background: rgb(1, 1, 1, 0);
-    z-index: 10;
+    letter-spacing: 0px;
   }
   
   .nav-menu {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     display: none;
-    background: rgb(1, 1, 1, 0);
-    z-index: 10;
-  }
-  
-  .nav-menu-item {
-    z-index: 10;
-    font-weight: 500;
-    font-size: 10px;
-    padding-bottom: 5px;
-    background: rgb(1, 1, 1, 0);
-    z-index: 10;
   }
   
   .nav-location {
-    margin-left: auto;
+    width: 100px;
+    margin-left: 0;
     font-size: 10px;
-    background: rgb(1, 1, 1, 0);
-    z-index: 10;
   }
   
   .active {
     border-bottom: 2px solid white;
-    background: rgb(1, 1, 1, 0);
-    z-index: 10;
   }
 
   .adaptive-burger {
     display: flex;
-    margin-left: 10px;
   }
 
-  .adaptive-menu {
-    background: rgba(65, 65, 65, 0.5);
-    padding: 10px;
-    border-radius: 10px;
+  .nav-menu-adaptive {
+    z-index: 50;
+    margin-top: 0;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50px;
-    margin-left: 270px;
+    align-items: center;
+    justify-content: start;
+    top: 0;
+    left: 0;
+    color: black;
+    border-radius: 0px 0px 5px 0;
+    width: 35%;
+    height: 40%;
+    background: #5a5a5a;
+    box-shadow: 0px 10px 15px 5px #8e8e8e;
+  }
+
+  .nav-menu-adaptive-item {
+    font-weight: 500;
+    font-size: 10px;
+    padding-bottom: 5px;
+    width: 100px;
+    margin-left: auto;
+  }
+
+  .nav-menu-adaptive-icon {
+    margin-left: auto;
+  }
+
+  .burger {
+    width: 100px;
+  }
+
+  .d-none {
+    display: none;
   }
 }
 
@@ -221,7 +226,6 @@
   .h2-second-title {
     font-size: 20px;
     font-weight: bold;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
   }
   
@@ -229,7 +233,6 @@
     font-size: 12px;
     font-weight: 500;
     margin-top: 5px;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
   }
   
@@ -249,7 +252,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
   }
   
   .second-section-item {
@@ -263,7 +265,6 @@
   .stage-title {
     font-size: 15px;
     font-weight: 600;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     position: relative;
   }
@@ -272,7 +273,6 @@
     font-size: 12px;
     font-weight: 500;
     margin-top: 5px;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     position: relative;
   }
@@ -306,7 +306,6 @@
     margin-top: 0px;
     font-size: 20px;
     font-weight: bold;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0)
   }
   
@@ -314,7 +313,6 @@
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0)
   }
   
@@ -327,7 +325,6 @@
     font-weight: 500;
     padding: 0 10px;
     margin-bottom: 20px;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     transition: 0.3s ease all;
   }
@@ -341,7 +338,6 @@
     font-weight: 500;
     padding: 10px 10px;
     margin-bottom: 20px;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     transition: 0.3s ease all;
   }
@@ -353,7 +349,6 @@
     border-radius: 5px;
     font-size:  15px;
     font-weight: 500;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
     transition: 0.3s ease all;
   }
@@ -369,7 +364,6 @@
     width: 126px;
     height: 126px;
     margin-left: auto;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0);
   }
   
@@ -378,7 +372,6 @@
     font-weight: 500;
     text-align: right;
     margin-top: 15px;
-    z-index: 10;
     background-color: rgb(1, 1, 1, 0)
   }
 }

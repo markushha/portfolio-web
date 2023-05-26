@@ -1,11 +1,11 @@
+import Layout from "@/app/components/layout/Layout";
 import Meta from "@/app/utils/Meta";
 
 import Link from "next/link";
 
 const NotFound = () => {
   return (
-    <>
-      <Meta title="Not Found :(" />
+    <Layout title="Not Found | 404">
       <div className="container">
         <div className="h-[100vh] items-center flex flex-col justify-center m-auto w-[60%]">
           <p className="text-3xl font-[500] text-center mb-4">
@@ -22,7 +22,7 @@ const NotFound = () => {
           </Link>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

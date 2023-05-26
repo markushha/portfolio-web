@@ -1,7 +1,5 @@
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 import Project from "@/app/components/Project";
-import Meta from "@/app/utils/Meta";
+import Layout from "@/app/components/layout/Layout";
 
 function Projects() {
 
@@ -25,11 +23,8 @@ function Projects() {
   ]
 
   return (
-    <>
-      <div className="container">
-        <Meta title="My Projects" />
-        <Navbar />
-      </div>
+    <Layout title="My Projects" description="Front-End Engineer - Mark Inger">
+      
       <div className="container">
         <div className="project-head">
         <h1 className="projects-h1">My Projects</h1>
@@ -42,10 +37,8 @@ function Projects() {
         })}
         </div>
       </div>
-      <div className="container">
-        <Footer />
-      </div>
-    </>
+      
+    </Layout>
   )
 }
 
