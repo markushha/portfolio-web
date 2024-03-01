@@ -60,7 +60,7 @@ function Socials(props: Props) {
                 <p className="socials-media-title">YouTube</p>
                 <Link
                   className="social-media-contact-item"
-                  href="https://www.youtube.com/@rightp1que612"
+                  href="https://www.youtube.com/@marktriedcoding"
                 >
                   <AiOutlineYoutube className="social-media-icon" />
                   <p className="social-media-contact-title">Mark Inger</p>
@@ -94,7 +94,9 @@ function Socials(props: Props) {
 
             <div className="socials-email">
               <p className="socials-subtitle">Email Me</p>
-              <a href="mailto:mark@starfund.app"><p className="socials-email-title">mark@starfund.app</p></a>
+              <a href="mailto:mark@starfund.app">
+                <p className="socials-email-title">mark@starfund.app</p>
+              </a>
               <p className="socials-descr mt-2 text-left">
                 Mark Inger
                 <br />

@@ -19,12 +19,12 @@ function Project(props: Props) {
     <div className="project-wrapper clean-z">
       <div className="project-img-wrapper">
         <Image
-            className="project-img"
-            src={image}
-            alt={`${title} image`}
-            width={759}
-            height={368}
-          />
+          className="project-img"
+          src={image}
+          alt={`${title} image`}
+          width={759}
+          height={368}
+        />
       </div>
 
       <div className="project-details clean-z">
@@ -62,7 +62,7 @@ function Project(props: Props) {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6 proj-svg"
+                className="proj-svg h-6 w-6"
               >
                 <path
                   stroke-linecap="round"
@@ -71,16 +71,18 @@ function Project(props: Props) {
                 />
               </svg>
 
-              <p className="links-title">View Demo</p>
+              <p className="links-title">Check it out</p>
             </div>
           </a>
 
-          <a className="clean-z" href={links[1]} target="_blank">
-            <div className="project-link link-img">
-              <AiFillGithub className="w-6 h-6 proj-svg" />
-              <p className="links-title">Visit Repo</p>
-            </div>
-          </a>
+          {links[1] && (
+            <a className="clean-z" href={links[1]} target="_blank">
+              <div className="project-link link-img">
+                <AiFillGithub className="proj-svg h-6 w-6" />
+                <p className="links-title">Visit Repo</p>
+              </div>
+            </a>
+          )}
         </div>
       </div>
     </div>
